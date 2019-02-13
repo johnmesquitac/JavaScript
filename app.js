@@ -33,7 +33,7 @@ var shoppinglist = [
         fuel: "etanol",
         pistons:[
              {maker: "BMW"},
-             {maker: "BMW2"} 
+             {maker: "BMW2"}
         ]
     },
     function(){return "drive";}
@@ -46,7 +46,7 @@ var array = [ "string",
                 function(){return "drive2";}
             ];*/
 
-//console.log(car.engine.make); 
+//console.log(car.engine.make);
 
 /*function name()
 {
@@ -68,7 +68,7 @@ var obj = {embedded: {}};
 
 // // var myName = "Lawrence";
 // // function printName()
-// // { 
+// // {
 // //     return "John Doe";
 // // }
 
@@ -96,7 +96,7 @@ function runExpression(){
 
 //console.log(this);
 
-var object = {
+/*var object = {
     prop: this,
     method: function(){
         return this;
@@ -114,4 +114,34 @@ function global(){
     return this;
 }
 
-global.call(object);
+global.call(object);*/
+
+// constructor
+
+
+/*function Apple (x, y , color, score)
+{
+  this.x = x;
+  this.y= y;
+  this.color= color;
+  this.score = score;
+}
+var apple1 = new Apple( 10, 20 ,"red", 200);
+*/
+
+//prototype
+
+function Apple (color, weight)
+{
+  this.color= color;
+  this.weight= weight;
+}
+
+Apple.prototype = {
+  eat : function(){return this},
+  throw : function(){return "throw";}
+};
+
+var apple1 = new Apple("red", 20);
+var apple2 = new Apple("green", 21);
+var apple3 = new Apple("purple", 22);
